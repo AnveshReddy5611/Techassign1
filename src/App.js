@@ -1,11 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Child from './techassign/techassign2';
+import CurrentDate from './techassign/techassign21';
+import MyComponent from './techassign/techassign22';
+import Todo from './techassign/techassign23';
 
 //JSX arrow function which returns a h1,p and ul elements
 
 const JSX = () =>{
   return(
-    <div>
+    <div className="JSX">
     <h1> Hello world</h1>
     <p>Three li elements are</p>
     <ul>
@@ -49,11 +53,36 @@ const Fruits =() =>{
 
 // TypesOfFood functional component it contains JSX and Fruits arrrow functions
 
-function TypesOfFood() {
+function TypesOfFood () {
+
   return (
     <div className="App">
+      {/* monday 1st */}
       <JSX/>
-      <Fruits/>     
+      <Fruits/>
+      {/* ----- */}
+
+      {/* 2nd day 1st */}
+      <Child state="Default"/>   
+      <Child state="Foo"/>   
+      <Child state="Bar"/>  
+      {/* ----- */}
+
+      {/* 2nd day 2nd */}
+      <h3>What date is it?</h3>
+      <CurrentDate date={Date()}/>
+       {/* ----- */}
+
+      {/* 2nd day 3rd */}
+      <MyComponent/>
+       {/* ----- */}
+
+      {/* 2nd day 4th */}
+      <Todo/>
+
+      {/* ----- */}
+
+
     </div>
   );
 }
